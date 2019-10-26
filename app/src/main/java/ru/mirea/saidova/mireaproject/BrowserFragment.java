@@ -1,10 +1,13 @@
 package ru.mirea.saidova.mireaproject;
 
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -61,6 +64,14 @@ public class BrowserFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
+        Uri address = Uri.parse("https://www.mirea.ru/");
+        Intent openLinkIntent = new Intent(Intent.ACTION_VIEW, address);
+        //if (openLinkIntent.resolveActivity(getPackageManager()) != null) {
+            startActivity(openLinkIntent);
+        //} else {
+          //  Log.d("Intent", "Проблема с намерением!");
+        //}
+
         return inflater.inflate(R.layout.fragment_browser, container, false);
     }
 
