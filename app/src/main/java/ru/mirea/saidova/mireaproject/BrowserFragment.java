@@ -11,6 +11,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.webkit.WebView;
 
 
 /**
@@ -50,7 +51,7 @@ public class BrowserFragment extends Fragment {
         fragment.setArguments(args);
         return fragment;
     }
-
+    private WebView webView;
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -64,15 +65,22 @@ public class BrowserFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        Uri address = Uri.parse("https://www.mirea.ru/");
-        Intent openLinkIntent = new Intent(Intent.ACTION_VIEW, address);
-        //if (openLinkIntent.resolveActivity(getPackageManager()) != null) {
-            startActivity(openLinkIntent);
-        //} else {
-          //  Log.d("Intent", "Проблема с намерением!");
-        //}
+//        Uri address = Uri.parse("https://www.mirea.ru/");
+//        Intent openLinkIntent = new Intent(Intent.ACTION_VIEW, address);
+//        //if (openLinkIntent.resolveActivity(getPackageManager()) != null) {
+//            startActivity(openLinkIntent);
+//        //} else {
+//          //  Log.d("Intent", "Проблема с намерением!");
+//        //}
+        View view = inflater.inflate(R.layout.fragment_browser,
+                container, false);
+        webView = view.findViewById(R.id.webView);
+        // включаем поддержку JavaScript
+        webView.getSettings().setJavaScriptEnabled(true);
+        // указываем страницу загрузки
+        webView.loadUrl("https://www.mirea.ru/");
 
-        return inflater.inflate(R.layout.fragment_browser, container, false);
+        return view;
     }
 
 }
