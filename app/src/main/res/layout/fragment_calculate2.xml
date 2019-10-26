@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CalculateFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="559dp"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/num1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/num2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName" />
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:id="@+id/radioButtonPlus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="+" />
+
+            <RadioButton
+                android:id="@+id/radioButtonMinus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="-" />
+
+            <RadioButton
+                android:id="@+id/radioButtonMulti"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="*" />
+
+            <RadioButton
+                android:id="@+id/radioButtonDiv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=":" />
+
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/btnRes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="onClick"
+            android:text="@string/count" />
+
+        <TextView
+            android:id="@+id/textViewRes"
+            android:layout_width="match_parent"
+            android:layout_height="57dp"
+            android:text="Result" />
+
+    </LinearLayout>
+</FrameLayout>
