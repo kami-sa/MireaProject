@@ -33,6 +33,10 @@
             android:id="@+id/nav_photofragm"
             android:icon="@drawable/ic_menu_gallery"
             android:title="@string/make_a_photo" />
+        <item
+            android:id="@+id/nav_recorder"
+            android:icon="@drawable/abc_vector_test"
+            android:title="@string/make_a_record" />
 
     </group>
 
