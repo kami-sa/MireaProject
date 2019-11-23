@@ -20,4 +20,9 @@
     <string name="fragment_calculate2">fragment_calculate2</string>
     <string name="Calculate" />
     <string name="count">Посчитать</string>
+    <string name="lab5_fragment">lab5_fragment</string>
+    <string name="communicate">Communicate</string>
+    <string name="sensors">Sensors</string>
+    <string name="browser">Browser</string>
+    <string name="make_a_photo">Make a photo</string>
 </resources>

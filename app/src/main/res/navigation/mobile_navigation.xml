@@ -50,4 +50,19 @@
         android:name="ru.mirea.saidova.mireaproject.CalculateFragment"
         android:label="@string/Calculate"
         tools:layout="@layout/fragment_calculate2" />
+    <fragment
+        android:id="@+id/nav_photofragm"
+        android:name="ru.mirea.saidova.mireaproject.nav_photofragm"
+        android:label="fragment_nav_photofragm"
+        tools:layout="@layout/fragment_nav_photofragm" />
+    <fragment
+        android:id="@+id/nav_sensor"
+        android:name="ru.mirea.saidova.mireaproject.nav_sensor"
+        android:label="fragment_nav_sensor"
+        tools:layout="@layout/fragment_nav_sensor" />
+    <fragment
+        android:id="@+id/nav_recorder"
+        android:name="ru.mirea.saidova.mireaproject.nav_recorder"
+        android:label="fragment_nav_recorder"
+        tools:layout="@layout/fragment_nav_recorder" />
 </navigation>
